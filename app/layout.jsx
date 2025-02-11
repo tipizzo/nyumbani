@@ -1,4 +1,6 @@
-import '@styles/lobal.css'
+import '@/styles/globals.css'
+import Navbar from "@/components/Navbar";
+
 
 export const metadata = {
     title: "Nyumbani",
@@ -10,6 +12,7 @@ const RootLayout = ({ children }) => {
         <html lang='en'>
             <body>
                 <main>
+                    <Navbar />
                     {children}
                 </main>
             </body>
