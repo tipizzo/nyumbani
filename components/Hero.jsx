@@ -6,7 +6,7 @@ const Hero = () => {
         <section>
             {/* Background Image with Overlay */}
             <div
-                className="min-h-[600px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative"
+                className="min-h-[650px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative"
                 style={{ backgroundImage: "url('/assets/images/hero_image.jpg')" }}
             >
                 {/* Dark Overlay */}
@@ -19,7 +19,7 @@ const Hero = () => {
                         <input
                             type="search"
                             placeholder="Enter an address, neighborhood, city, or ZIP code"
-                            className="py-4 px-5 w-[30rem] rounded-lg text-gray-800 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-300"
+                            className="py-4 px-5 w-[40rem] rounded-lg text-gray-800 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-300"
                         />
                     </Form>
                 </div>
