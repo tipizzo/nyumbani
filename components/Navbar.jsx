@@ -2,12 +2,29 @@
 
 import { House, User } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 
 const Navbar = () => {
+
+    const { data: session } = useSession();
+    const [providers, setProviders] = useState(null);
+
+    useEffect(() => {
+        const setUpProviders = async () => {
+            const response = await getProviders();
+
+            setProviders(response);
+        }
+
+        setUpProviders();
+    }, [])
+
     return (
         <nav className="flex items-center justify-around w-full pt-4 px-10 bg-white border-b border-gray-100 shadow-md">
-            
+
             <Link href="" className=" font-extrabold mb-4">
                 <h1 className="flex items-center justify-center gap-1 text-2xl">N Y U M B<House className="text-green-600 font-extrabold" />N I </h1>
             </Link>
@@ -28,9 +45,44 @@ const Navbar = () => {
                     Available Locations
                 </Link>
             </div>
-            <button className="flex gap-1 items-center justify-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300">
-                <User /> Sign In
-            </button>
+            <div>
+                {session?.user ? (
+                    <div>
+                        <Link href="/add_item" className="">
+                            Create Post
+                        </Link>
+
+                        <button className="flex gap-1 items-center justify-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300">
+                            <User /> Sign Out
+                        </button>
+
+                        <Link href="/profile">
+                            <Image
+                                src={session?.user.image}
+                                width={37}
+                                height={37}
+                                className="rounded-full"
+                                alt="profile"
+                            />
+                        </Link>
+                    </div>
+
+                ) : (
+                    <>
+                        {providers && Object.values(providers).map((provider) => (
+                            <button
+                                className="flex gap-1 items-center justify-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
+                                key={provider.name}
+                                onClick={() => signIn(provider.id)}
+                            >
+                                <User /> Sign In
+                            </button>
+                        ))}
+                    </>
+                )}
+
+            </div>
+
 
             {/* Desktop Navigation */}
 
