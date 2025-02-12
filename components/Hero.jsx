@@ -6,7 +6,7 @@ const Hero = () => {
         <section>
             {/* Background Image with Overlay */}
             <div
-                className="min-h-[500px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative"
+                className="min-h-[500px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative rounded-b-3xl"
                 style={{ backgroundImage: "url('/assets/images/hero_image.jpg')" }}
             >
                 {/* Dark Overlay */}
@@ -14,7 +14,10 @@ const Hero = () => {
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-white pt-40">
-                    <h1 className="text-6xl font-extrabold mb-12"><span className="text-green-500">Discover Homes</span> that Match Your Lifestyle.</h1>
+                    <div className="flex flex-col gap-4 mb-14 items-center justify-center">
+                        <h1 className="text-6xl font-bold"><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-500">Discover Homes</span> that Match Your Lifestyle.</h1>
+                        <p className="text-sm font-semibold">Nyumbani is a platform where you can buy, sell, or rent properties and connect with trusted real estate agents.</p>
+                    </div>
                     <Form action="/" scroll={false} className="">
                         <input
                             type="search"

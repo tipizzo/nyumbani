@@ -1,5 +1,6 @@
+import About from '@/components/About'
+import Feed from '@/components/Feed'
 import Hero from '@/components/Hero'
-import Navbar from '@/components/Navbar'
 import React from 'react'
 
 const Home = () => {
@@ -7,6 +8,8 @@ const Home = () => {
     <>
         
         <Hero />
+        <About />
+        <Feed />
     </>
   )
 }
