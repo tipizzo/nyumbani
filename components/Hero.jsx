@@ -6,14 +6,14 @@ const Hero = () => {
         <section>
             {/* Background Image with Overlay */}
             <div
-                className="min-h-[650px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative"
+                className="min-h-[500px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative"
                 style={{ backgroundImage: "url('/assets/images/hero_image.jpg')" }}
             >
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-center h-full text-white pt-48">
+                <div className="relative z-10 flex flex-col items-center justify-center h-full text-white pt-40">
                     <h1 className="text-6xl font-extrabold mb-12"><span className="text-green-500">Discover Homes</span> that Match Your Lifestyle.</h1>
                     <Form action="/" scroll={false} className="">
                         <input

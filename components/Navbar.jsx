@@ -1,6 +1,6 @@
 'use client'
 
-import { House, User } from "lucide-react"
+import { House, LogOut, Plus, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -47,13 +47,13 @@ const Navbar = () => {
             </div>
             <div>
                 {session?.user ? (
-                    <div>
-                        <Link href="/add_item" className="">
-                            Create Post
+                    <div className="flex items-center gap-6 mb-4">
+                        <Link href="/add_item" className="flex">
+                            <Plus /> Create Post
                         </Link>
 
-                        <button className="flex gap-1 items-center justify-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300">
-                            <User /> Sign Out
+                        <button type="button" onClick={signOut} className="flex gap-1 items-center justify-center text-sm font-semibold  hover:text-green-700 transition-all duration-300">
+                            <LogOut /> Sign Out
                         </button>
 
                         <Link href="/profile">

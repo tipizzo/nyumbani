@@ -15,6 +15,21 @@ const userSchema = new Schema({
 
     image: {
         type: String,
+    },
+
+    phone: {
+        type: String,
+        required: [true, 'Phone number required']
+    },
+
+    role: {
+        type: String,
+        enum: ["buyer", "seller", "agent", "admin"],
+        default: "buyer"
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
 })
 
