@@ -48,7 +48,7 @@ const Navbar = () => {
             <div>
                 {session?.user ? (
                     <div className="flex items-center gap-6 mb-4">
-                        <Link href="/add_item" className="flex">
+                        <Link href="/add_item" className="flex text-sm">
                             <Plus /> Create Post
                         </Link>
 

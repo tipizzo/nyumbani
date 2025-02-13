@@ -5,7 +5,7 @@ import { ArrowBigRight, Bot, ChartArea, ListCheck, MessageCircle } from "lucide-
 
 const About = () => {
     return (
-        <section className="flex flex-col items-center justify-center mt-10 w-full">
+        <section className="flex flex-col items-center justify-center mt-16 w-full">
             <h1 className="text-2xl font-semibold">Making Property Transactions Seamless & Hassle-Free</h1>
             <div className="flex mt-10 justify-between w-full max-w-5xl gap-10">
                 <div className="flex flex-col items-center text-center w-1/3 p-5 border rounded-lg shadow-md gap-6">
