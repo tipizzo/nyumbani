@@ -8,10 +8,10 @@ const Footer = () => {
     const copyrightYear = new Date().getFullYear()
 
   return (
-    <footer className='flex flex-col gap-5 py-12 w-full bg-gray-100'>
+    <footer className='flex flex-col items-center justify-center mx-auto gap-5 py-12 w-full bg-gray-100'>
         <div className='flex flex-col items-center gap-2'>
             <h3 className='font-bold'>About Nyumbani's Recommandations</h3>
-            <p className='text-slate-500 text-[15px]'>Recommandations are based on your location and search activity, such as the homes you've viewed
+            <p className='text-slate-500 text-[15px] text-center'>Recommandations are based on your location and search activity, such as the homes you've viewed
                 and saved and filters you've used. We use this information to bring similar homes to your attention,
                 so you don't miss out.
             </p>
@@ -19,26 +19,26 @@ const Footer = () => {
         <hr className='w-[500px] my-5'/>
         </div>
         <div className='flex flex-col gap-5'>
-            <div className='flex gap-5 justify-center'>
-                <span className='text-slate-500 text-[14px]'>About</span>
-                <span className='text-slate-500 text-[14px]'>Research</span>
-                <span className='text-slate-500 text-[14px]'>Careers</span>
-                <span className='text-slate-500 text-[14px]'>Privacy Notice</span>
-                <span className='text-slate-500 text-[14px]'>Help</span>
-                <span className='text-slate-500 text-[14px]'>Advertise</span>
-                <span className='text-slate-500 text-[14px]'>Fair Housing Guide</span>
-                <span className='text-slate-500 text-[14px]'>Advocacy</span>
-                <span className='text-slate-500 text-[14px]'>Term of use</span>
+            <div className='flex gap-5 text-center justify-center'>
+                <span className='text-slate-500 text-[13px]'>About</span>
+                <span className='text-slate-500 text-[13px]'>Research</span>
+                <span className='text-slate-500 text-[13px]'>Careers</span>
+                <span className='text-slate-500 text-[13px]'>Privacy Notice</span>
+                <span className='text-slate-500 text-[13px]'>Help</span>
+                <span className='text-slate-500 text-[13px]'>Advertise</span>
+                <span className='text-slate-500 text-[13px]'>Fair Housing Guide</span>
+                <span className='text-slate-500 text-[13px]'>Advocacy</span>
+                <span className='text-slate-500 text-[13px]'>Term of use</span>
             </div>
             <div className='flex gap-5 justify-center'>
-                <span className='text-slate-500 text-[14px]'>Privacy Portal</span>
-                <span className='text-slate-500 text-[14px]'>Cooke Preference</span>
-                <span className='text-slate-500 text-[14px]'>Learn</span>
-                <span className='text-slate-500 text-[14px]'>AI</span>
-                <span className='text-slate-500 text-[14px]'>Mobile Apps</span>
+                <span className='text-slate-500 text-[13px]'>Privacy Portal</span>
+                <span className='text-slate-500 text-[13px]'>Cooke Preference</span>
+                <span className='text-slate-500 text-[13px]'>Learn</span>
+                <span className='text-slate-500 text-[13px]'>AI</span>
+                <span className='text-slate-500 text-[13px]'>Mobile Apps</span>
             </div>
             <hr />
-            <div className='flex flex-col gap-5 items-center'>
+            <div className='flex flex-col gap-5 items-center text-center'>
                 <p className='text-slate-500 text-[10px]'>Nyumbani Group is committed to ensuring digital accessibility for individuals with disabilities.
                     We are continuously working to improve the accessibility of our <br /> web experience for everyone, and we welcome 
                     your feedback and accomodation requests. If you wish to report an issue, <Link href="" className='text-blue-500'>Please, let us know.</Link>
