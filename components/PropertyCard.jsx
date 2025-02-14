@@ -9,7 +9,7 @@ const PropertyCard = () => {
             <h1 className="text-2xl font-semibold mb-12">Discover your Perfect Home</h1>
             <div className=" flex items-stretch w-full justify-around">
 
-                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border border-gray-200 rounded-xl shadow-sm">
+                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border rounded-xl shadow-xl">
                     <Image
                         src="/assets/images/apart_1.jpg"
                         width={350}
@@ -17,7 +17,7 @@ const PropertyCard = () => {
                         alt=""
                         className="rounded-xl"
                     />
-                    <span className="absolute w-max text-[10px] bg-orange-600 text-white m-3 p-1 border border-none rounded-lg">Rent</span>
+                    <span className="absolute w-max text-[10px] bg-orange-600 text-white m-3 p-1 border rounded-xl">Pending</span>
                     <div className="flex flex-col gap-2 mt-5 px-2">
                         <div className="flex items-center justify-between">
                             <p className="text-[15px] font-bold">Les Volcans - Goma/DRC</p>
@@ -29,7 +29,7 @@ const PropertyCard = () => {
                         <p className="text-[15px] font-bold">50 $ par jour</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border border-gray-200 rounded-xl shadow-sm">
+                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer  rounded-xl shadow-xl">
                     <Image
                         src="/assets/images/apart_2.jpg"
                         width={350}
@@ -37,7 +37,7 @@ const PropertyCard = () => {
                         alt=""
                         className="rounded-xl"
                     />
-                    <span className="absolute w-max text-[10px] bg-green-600 text-white m-3 p-1 border border-none rounded-lg">Available</span>
+                    <span className="absolute w-max text-[10px] bg-green-600 text-white m-3 p-1 border rounded-lg">Available</span>
                     <div className="flex flex-col gap-2 mt-5 px-2">
                         <div className="flex items-center justify-between">
                             <p className="text-[15px] font-bold">Les Volcans - Goma/DRC</p>
@@ -49,7 +49,7 @@ const PropertyCard = () => {
                         <p className="text-[15px] font-bold">50 $ par jour</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border border-gray-200 rounded-xl shadow-sm">
+                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border rounded-xl shadow-xl">
                     <Image
                         src="/assets/images/apart_3.jpg"
                         width={350}
@@ -57,7 +57,7 @@ const PropertyCard = () => {
                         alt=""
                         className="rounded-xl"
                     />
-                    <span className="absolute w-max text-[10px] bg-red-600 text-white m-3 p-1 border border-none rounded-lg">Not available</span>
+                    <span className="absolute w-max text-[10px] bg-red-600 text-white m-3 p-1 border rounded-lg">Not available</span>
                     <div className="flex flex-col gap-2 mt-5 px-2">
                         <div className="flex items-center justify-between">
                             <p className="text-[15px] font-bold">Les Volcans - Goma/DRC</p>
@@ -69,7 +69,7 @@ const PropertyCard = () => {
                         <p className="text-[15px] font-bold">50 $ par jour</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border border-gray-200 rounded-xl shadow-sm">
+                <div className="flex flex-col gap-1 max-w-[350px] cursor-pointer border rounded-xl shadow-xl  ">
                     <Image
                         src="/assets/images/apart_1.jpg"
                         width={350}
@@ -77,7 +77,7 @@ const PropertyCard = () => {
                         alt=""
                         className="rounded-xl"
                     />
-                    <span className="absolute w-max text-[10px] bg-green-600 text-white m-3 p-1 border border-none rounded-lg">Available</span>
+                    <span className="absolute w-max text-[10px] bg-green-600 text-white m-3 p-1 border rounded-lg">Available</span>
                     <div className="flex flex-col gap-2 mt-5 px-2">
                         <div className="flex items-center justify-between">
                             <p className="text-[15px] font-bold">Les Volcans - Goma/DRC</p>
