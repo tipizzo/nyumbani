@@ -58,9 +58,9 @@ const Footer = () => {
                     </button>
                 </div>
                 <div className='flex gap-5 py-5'>
-                    <Instagram className='text-green-700 font-bold w-8 h-8' />
-                    <Facebook className='text-green-700 font-bold w-8 h-8' />
-                    <X className='text-green-700 font-bold w-8 h-8' />
+                    <Instagram className='text-green-700 font-bold w-8 h-8 cursor-pointer' />
+                    <Facebook className='text-green-700 font-bold w-8 h-8 cursor-pointer' />
+                    <X className='text-green-700 font-bold w-8 h-8 cursor-pointer' />
                 </div>
                 <p className='text-slate-600 text-[11px]'>&copy; {copyrightYear} Nyumbani Inc.</p>
                     
