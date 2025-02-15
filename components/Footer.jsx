@@ -20,22 +20,22 @@ const Footer = () => {
         </div>
         <div className='flex flex-col gap-5'>
             <div className='flex gap-5 text-center justify-center'>
-                <span className='text-slate-500 text-[13px]'>About</span>
-                <span className='text-slate-500 text-[13px]'>Research</span>
-                <span className='text-slate-500 text-[13px]'>Careers</span>
-                <span className='text-slate-500 text-[13px]'>Privacy Notice</span>
-                <span className='text-slate-500 text-[13px]'>Help</span>
-                <span className='text-slate-500 text-[13px]'>Advertise</span>
-                <span className='text-slate-500 text-[13px]'>Fair Housing Guide</span>
-                <span className='text-slate-500 text-[13px]'>Advocacy</span>
-                <span className='text-slate-500 text-[13px]'>Term of use</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>About</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Research</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Careers</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Privacy Notice</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Help</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Advertise</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Fair Housing Guide</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Advocacy</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Term of use</span>
             </div>
             <div className='flex gap-5 justify-center'>
-                <span className='text-slate-500 text-[13px]'>Privacy Portal</span>
-                <span className='text-slate-500 text-[13px]'>Cooke Preference</span>
-                <span className='text-slate-500 text-[13px]'>Learn</span>
-                <span className='text-slate-500 text-[13px]'>AI</span>
-                <span className='text-slate-500 text-[13px]'>Mobile Apps</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Privacy Portal</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Cooke Preference</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Learn</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>AI</span>
+                <span className='text-slate-500 text-[13px] cursor-pointer'>Mobile Apps</span>
             </div>
             <hr />
             <div className='flex flex-col gap-5 items-center text-center'>
