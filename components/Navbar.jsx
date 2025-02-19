@@ -30,26 +30,29 @@ const Navbar = () => {
             <Link href="" className=" font-extrabold">
                 <h1 className="flex items-center gap-1 text-2xl">N Y U M B<House className="text-green-600 font-extrabold" />N I </h1>
             </Link>
+            {/* Desktop LInk */}
 
-            {/* Desktop Links */}
-            <div className="hidden md:flex gap-6">
-                <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Buy
-                </Link>
-                <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Rent
-                </Link>
-                <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Loans
-                </Link>
-                <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Find Agent
-                </Link>
-                <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Locations
-                </Link>
-            </div>
-
+            {session?.user ? (
+                <div className="hidden md:flex gap-6">
+                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
+                        Buy
+                    </Link>
+                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
+                        Rent
+                    </Link>
+                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
+                        Loans
+                    </Link>
+                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
+                        Find Agent
+                    </Link>
+                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
+                        Locations
+                    </Link>
+                </div>
+            ) : (
+                <></>
+            )}
             {/* User Actions */}
             <div>
                 {session?.user ? (
@@ -77,7 +80,7 @@ const Navbar = () => {
                     <>
                         {providers && Object.values(providers).map((provider) => (
                             <button
-                                className="flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
+                                className="hidden md:flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
                             >
@@ -95,18 +98,52 @@ const Navbar = () => {
             </button>
 
             {/* Mobile Navigation */}
+
             {openMenu && (
-                <div className="absolute top-16 right-0 w-60 bg-white shadow-lg p-4 flex flex-col gap-4 md:hidden">
-                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Buy</Link>
-                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Rent</Link>
-                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Loans</Link>
-                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Find Agent</Link>
-                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Locations</Link>
+                <div className="absolute top-16 right-0 bg-white shadow-lg p-4 flex flex-col gap-4 z-50 rounded-sm md:hidden">
+                    {session?.user ? (
+                        <>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Buy</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Rent</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Loans</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Find Agent</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Locations</Link>
+                            <hr />
+                        </>
+                    ) : (
+                        <></>
+                    )}
+
+                    {session?.user ? (
+                        <>
+                            <Link href="/add_item" className="flex text-sm">
+                                <Plus /> Create Post
+                            </Link>
+                            <button type="button" onClick={signOut} className="flex text-sm font-semibold hover:text-green-700">
+                                <LogOut /> Sign Out
+                            </button>
+                            <Link href="/">
+                                <Image
+                                    src={session?.user.image}
+                                    width={37}
+                                    height={37}
+                                    className="rounded-full"
+                                    alt="profile"
+                                />
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            {providers && Object.values(providers).map((provider) => (
+                                <button key={provider.name} onClick={() => signIn(provider.id)}
+                                    className="flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-2 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-300">
+                                    <User /> Sign In
+                                </button>
+                            ))}
+                        </>
+                    )}
                 </div>
             )}
-
-
-
         </nav>
     )
 }
