@@ -26,7 +26,7 @@ const properties = [
         bathroom: 2,
         monthly_price: 300,
         daily_price: 40,
-        availability: "Unavailable",
+        availability: "unavailable",
         image: "/assets/images/apart_2.jpg"
     },
     {
@@ -41,8 +41,23 @@ const properties = [
         bathroom: 2,
         monthly_price: 600,
         daily_price: 45,
-        availability: "Pending",
+        availability: "pending",
         image: "/assets/images/apart_3.jpg"
+    },
+    {
+        id: 4,
+        title: "property_2",
+        neighborhood: "Les Volcans",
+        city: "Goma",
+        country: "DRC",
+        description: "Cet appartement situé au bord du lac Kivu vous offre une vue unique sur le lac...",
+        livingroom: 1,
+        bedroom: 5,
+        bathroom: 2,
+        monthly_price: 350,
+        daily_price: 25,
+        availability: "available",
+        image: "/assets/images/apart_1.jpg"
     },
 ]
 

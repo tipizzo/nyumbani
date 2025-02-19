@@ -19,8 +19,8 @@ const PropertyCard = () => {
                         />
                         <span className={`absolute w-max text-[10px] 
                             ${property.availability === "available" ? "bg-green-600" 
-                            : property.availability === "Unavailable" ? "bg-red-600"
-                            : property.availability === "Pending" ? "bg-orange-600" 
+                            : property.availability === "unavailable" ? "bg-red-600"
+                            : property.availability === "pending" ? "bg-orange-600" 
                             : "bg-gray-600"}
                              text-white m-3 p-1 rounded-xl`}>{property.availability}</span>
                         <div className="flex flex-col gap-2 mt-5 px-2">
