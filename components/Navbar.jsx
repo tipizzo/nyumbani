@@ -25,10 +25,14 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
     return (
-        <nav className="flex items-center justify-between w-full px-6 py-4 bg-white border-b border-gray-100 shadow-md">
+        <nav className="flex items-center justify-between w-full px-10 py-2 bg-white border-b border-gray-100 shadow-md">
             {/* Logo */}
             <Link href="" className=" font-extrabold">
-                <h1 className="flex items-center gap-1 text-2xl">N Y U M B<House className="text-green-600 font-extrabold" />N I </h1>
+                <Image src="/assets/images/traced-logo_nyumbani.png"
+                    width={110}
+                    height={80}
+                    alt=""
+                />
             </Link>
             {/* Desktop LInk */}
 
@@ -80,7 +84,7 @@ const Navbar = () => {
                     <>
                         {providers && Object.values(providers).map((provider) => (
                             <button
-                                className="hidden md:flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
+                                className="hidden md:flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-1 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
                             >
@@ -136,7 +140,7 @@ const Navbar = () => {
                         <>
                             {providers && Object.values(providers).map((provider) => (
                                 <button key={provider.name} onClick={() => signIn(provider.id)}
-                                    className="flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-2 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-300">
+                                    className="flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-1 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-300">
                                     <User /> Sign In
                                 </button>
                             ))}
