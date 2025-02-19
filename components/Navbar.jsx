@@ -1,6 +1,6 @@
 'use client'
 
-import { House, LogOut, Plus, User } from "lucide-react"
+import { House, LogOut, Menu, Plus, User, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -21,6 +21,8 @@ const Navbar = () => {
 
         setUpProviders();
     }, [])
+
+    const [openMenu, setOpenMenu] = useState(false);
 
     return (
         <nav className="flex items-center justify-between w-full px-6 py-4 bg-white border-b border-gray-100 shadow-md">
@@ -75,7 +77,7 @@ const Navbar = () => {
                     <>
                         {providers && Object.values(providers).map((provider) => (
                             <button
-                                className="flex gap-1 items-center justify-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
+                                className="flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-2 mb-4 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
                             >
@@ -87,13 +89,17 @@ const Navbar = () => {
 
             </div>
 
-
-            {/* Desktop Navigation */}
-            
-
-
+            {/* Burger Menu Mobile */}
+            <button onClick={() => setOpenMenu(!openMenu)} className="md:hidden">
+                {openMenu ? <X size={28} /> : <Menu size={28} />}
+            </button>
 
             {/* Mobile Navigation */}
+            {openMenu && (
+                <div className="absolute top-16 right-0 w-60 bg-white shadow-lg p-4 flex flex-col gap-4 md:hidden">
+
+                </div>
+            )}
             
 
 
