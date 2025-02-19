@@ -32,7 +32,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Links */}
-                <div className="flex gap-8 mb-4">
+            <div className="hidden md:flex gap-6">
                 <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
                     Buy
                 </Link>
@@ -40,13 +40,13 @@ const Navbar = () => {
                     Rent
                 </Link>
                 <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Home Loans
+                    Loans
                 </Link>
                 <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
                     Find Agent
                 </Link>
                 <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                    Available Locations
+                    Locations
                 </Link>
             </div>
 
@@ -97,10 +97,14 @@ const Navbar = () => {
             {/* Mobile Navigation */}
             {openMenu && (
                 <div className="absolute top-16 right-0 w-60 bg-white shadow-lg p-4 flex flex-col gap-4 md:hidden">
-
+                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Buy</Link>
+                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Rent</Link>
+                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Loans</Link>
+                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Find Agent</Link>
+                    <Link href="#" className="text-sm font-semibold hover:text-gren-700">Locations</Link>
                 </div>
             )}
-            
+
 
 
         </nav>
