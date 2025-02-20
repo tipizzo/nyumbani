@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const PropertyCard = () => {
     return (
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center px-3">
             {/* Grid Layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-fit sm:max-w-7xl mx-auto py-14 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-fit sm:max-w-7xl mx-auto py-10 px-4">
                 {properties.map(property => (
                     <div key={property.id} className="flex flex-col gap-1 max-w-[350px] sm:max-w-[500px] w-full cursor-pointer rounded-xl shadow-xl hover:bg-gray-100 transition-all duration-300 mb-8 pb-5 relative">
                         <div className="relative w-full h-[200px]">
@@ -44,7 +44,7 @@ const PropertyCard = () => {
             </div>
 
             {/* Centered Button */}
-            <div className="w-full flex justify-center mt-8">
+            <div className="w-full flex justify-center">
                 <Link href="" className="border-2 border-green-600 flex items-center justify-center p-2 rounded-xl gap-2 text-sm">
                     Explore More <ArrowRight />
                 </Link>
