@@ -1,11 +1,17 @@
 'use client'
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 import { ArrowBigRight, Bot, ChartArea, ListCheck, MessageCircle } from "lucide-react"
 
 const About = () => {
     return (
-        <section className="flex flex-col items-center justify-center mt-16 w-full">
+        <motion.section 
+        initial={{ opacity: 0, x: -200 }}
+        transition={{duration: 1}}
+        whileInView={{ opacity: 1, x:0 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center justify-center mt-16 w-full">
             <h1 className="text-xl sm:text-2xl font-semibold text-center">Making Property Transactions Seamless & Hassle-Free</h1>
             <div className="flex flex-col sm:flex-row sm:justify-between mt-10 items-center w-full max-w-5xl gap-6">
                 <div className="flex flex-col items-center text-center w-2/3 sm:w-1/3 p-5 border rounded-lg shadow-md gap-6">
@@ -33,7 +39,7 @@ const About = () => {
                     </button>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

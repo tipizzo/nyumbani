@@ -4,10 +4,16 @@ import { ArrowRight, Heart, Link2, Star } from "lucide-react"
 import Image from "next/image"
 import properties from "@/utils/data";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const PropertyCard = () => {
     return (
-        <div className="w-full flex flex-col items-center px-3">
+        <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full flex flex-col items-center px-3">
             {/* Grid Layout */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-fit sm:max-w-7xl mx-auto py-10 px-4">
                 {properties.map(property => (
@@ -45,11 +51,11 @@ const PropertyCard = () => {
 
             {/* Centered Button */}
             <div className="w-full flex justify-center">
-                <Link href="" className="border-2 border-green-600 flex items-center justify-center p-2 rounded-xl gap-2 text-sm">
-                    Explore More <ArrowRight />
+                <Link href="" className="border border-green-600 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 hover:text-white flex items-center justify-center p-2 rounded-xl gap-2 text-sm transition-all duration-300">
+                    Explore More <ArrowRight className=" hover:text-white transition-all" />
                 </Link>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,5 +1,8 @@
+'use client'
+
 import { Search } from "lucide-react";
 import Form from 'next/form'
+import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
@@ -14,10 +17,15 @@ const Hero = () => {
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-6 pt-32 sm:pt-40 text-center">
-                    <div className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-14 items-center justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: 200 }}
+                        transition={{ duration: 1 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-14 items-center justify-center">
                         <h1 className="text-4xl sm:text-6xl font-bold"><span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-500">Discover Homes</span> {" "} that Match Your Lifestyle.</h1>
                         <p className="text-sm sm:text-base font-semibold max-w-xl">Nyumbani is a platform where you can buy, sell, or rent properties and connect with trusted real estate agents.</p>
-                    </div>
+                    </motion.div>
                     <Form action="/" scroll={false} className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
                         <input
                             type="search"
