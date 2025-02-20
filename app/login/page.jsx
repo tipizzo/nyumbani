@@ -1,11 +1,11 @@
-'use client'
 
-const page = () => {
+
+const Login = () => {
   return (
-    <div className='bg-black'>
-        <h1 className='text-green-700'>Hello World</h1>
+    <div className='bg-black text-white'>
+      Hello World
     </div>
   )
 }
 
-export default page
+export default Login;
