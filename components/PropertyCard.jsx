@@ -38,8 +38,8 @@ const PropertyCard = () => {
 
                 ))}
 
-                <button className="flex border-2 border-green-600 items-center justify-center p-2 rounded-xl">
-                    <Link href="" className="flex gap-2">Explore More <ArrowRight /></Link>
+                <button className="flex border-2 mx-auto border-green-600 items-center justify-center p-2 rounded-xl">
+                    <Link href="" className="flex gap-2 text-sm">Explore More <ArrowRight /></Link>
                 </button>
             </div>
         </>
