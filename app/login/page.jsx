@@ -6,6 +6,7 @@ const Login = () => {
     return (
         <div className="flex w-screen h-screen">
             <div className="relative w-1/2 h-full">
+
                 <Image
                     src="/assets/images/login_image.jpeg"
                     alt="Login - Registration Page"
@@ -13,6 +14,13 @@ const Login = () => {
                     objectFit="cover"
                     className="absolute top-0 left-0"
                 />
+                <div className="absolute top-0 left-0 w-full h-full bg-green-800 bg-opacity-20">
+                    <div className="flex flex-col items-center justify-center relative gap-12 top-60 z-10">
+                        <h1 className="text-white text-5xl font-bold">WELCOME TO</h1>
+                        <img src="/assets/images/traced-logo_nyumbani.png" className="" />
+                    </div>
+                </div>
+
             </div>
             <div className="flex flex-col items-center justify-center w-1/2 gap-5 bg-gray-100">
                 <h2 className="font-bold">Sign Up to Nyumbani</h2>
@@ -57,13 +65,13 @@ const Login = () => {
                             <Link href="" className="flex gap-3 items-center text-center">
                                 <img src="/assets/images/google.png" className="w-8 h-8" />
                                 <p className="font-semibold">Connect with Google</p>
-                                </Link>
+                            </Link>
                         </button>
                         <button className="border-none bg-white p-1 w-[220px] rounded-lg text-sm hover:bg-gray-200 transition-all duration-300">
                             <Link href="" className="flex gap-3 items-center text-center">
                                 <img src="/assets/images/facebook.png" className="w-8 h-8" />
                                 <p className="font-semibold">Connect with Facebook</p>
-                                </Link>
+                            </Link>
                         </button>
                     </div>
                     <p className="text-center text-sm mt-2">Already have an account ? <Link href="" className="text-blue-700 font-bold cursor-pointer">Login</Link></p>
