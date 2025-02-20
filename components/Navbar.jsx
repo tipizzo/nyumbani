@@ -11,6 +11,9 @@ const Navbar = () => {
 
     const { data: session } = useSession();
     const [providers, setProviders] = useState(null);
+    
+    const [openMenu, setOpenMenu] = useState(false);
+    const [scrolling, setScrolling] = useState(false);
 
     useEffect(() => {
         const setUpProviders = async () => {
@@ -22,10 +25,22 @@ const Navbar = () => {
         setUpProviders();
     }, [])
 
-    const [openMenu, setOpenMenu] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolling(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
 
     return (
-        <nav className="flex items-center justify-between w-full px-10 py-2 bg-white border-b border-gray-100 shadow-md">
+        <nav className={`fixed top-0 left-0 flex items-center justify-between w-full px-10 py-2 border-b z-50 transition-all duration-500 ${
+        scrolling
+          ? "bg-white shadow-md border-gray-100"
+          : "bg-transparent border-transparent shadow-none"
+      }`}>
             {/* Logo */}
             <Link href="" className=" font-extrabold">
                 <Image src="/assets/images/traced-logo_nyumbani.png"
@@ -84,7 +99,7 @@ const Navbar = () => {
                     <>
                         {providers && Object.values(providers).map((provider) => (
                             <button
-                                className="hidden md:flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-1 rounded-lg hover:bg-green-600 hover:text-gray-50 transition-all duration-300"
+                                className="hidden md:flex gap-1 items-center text-sm font-semibold border-1 border-green-600 p-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-slate-50 transition-all duration-300"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
                             >

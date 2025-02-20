@@ -6,7 +6,7 @@ const Hero = () => {
         <section>
             {/* Background Image with Overlay */}
             <div
-                className="min-h-[500px] sm:min-h-[600px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative rounded-b-xl"
+                className="min-h-[500px] sm:min-h-[600px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative rounded-b-md"
                 style={{ backgroundImage: "url('/assets/images/hero_image.jpg')" }}
             >
                 {/* Dark Overlay */}

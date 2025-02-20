@@ -58,7 +58,7 @@ const Footer = () => {
                         </button>
                     </div>
                 </div>
-                <div className='flex gap-5 py-5'>
+                <div className='flex gap-5 py-5 justify-center sm:justify-start'>
                     <Instagram className='text-green-700 w-6 h-6 cursor-pointer' />
                     <Facebook className='text-green-700 w-6 h-6 cursor-pointer' />
                     <X className='text-green-700 w-6 h-6 cursor-pointer' />

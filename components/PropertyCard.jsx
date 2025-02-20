@@ -1,6 +1,6 @@
 'use client'
 
-import { Star } from "lucide-react"
+import { Heart, Star } from "lucide-react"
 import Image from "next/image"
 import properties from "@/utils/data";
 
@@ -26,7 +26,7 @@ const PropertyCard = () => {
                         <div className="flex flex-col gap-2 mt-5 px-2">
                             <div className="flex items-center justify-between">
                                 <p className="text-[15px] font-bold">{property.neighborhood}, {property.city} - {property.country}</p>
-                                <p className="flex gap-1 text-[15px] font-bold items-center"><Star className="" /></p>
+                                <p className="flex gap-1 text-[15px] font-bold items-center"><Heart className="" /></p>
                             </div>
                             <p className="text-sm font-light">{property.description}</p>
                             <p className="text-sm font-semibold">Bedroom: {property.bedroom}</p>
