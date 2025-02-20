@@ -36,7 +36,7 @@ const Footer = () => {
             <div className='flex flex-col items-center text-center px-4'>
                 <p className='text-slate-500 text-xs sm:text-sm'>Nyumbani Group is committed to ensuring digital accessibility for individuals with disabilities.
                     We are continuously working to improve the accessibility of our <br /> web experience for everyone, and we welcome
-                    your feedback and accomodation requests. If you wish to report an issue, <Link href="" className='text-blue-500'>Please, let us know.</Link>
+                    your feedback and accomodation requests. If you wish to report an issue. <Link href="" className='text-blue-500'>Please, let us know.</Link>
                 </p>
                 <div className='flex flex-col items-center gap-4 mt-5'>
                     <Link href="" className=" font-extrabold">
