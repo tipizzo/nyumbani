@@ -1,7 +1,10 @@
+'use client'
+
 import { Apple, AppleIcon, Facebook, Instagram, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
 
@@ -19,15 +22,15 @@ const Footer = () => {
                 <hr className='w-[200px] sm:w-[500px] my-5' />
             </div>
             <div className='flex flex-wrap justify-center gap-3 sm:gap-5 text-center px-4'>
-                {["About", "Research", "Careers", "Privacy Notice", "Help", 
-            "Advertise", "Fair Housing Guide", "Advocacy", "Terms of Use",
-            "Privacy Portal", "Cookie Preference", "Learn", "AI", "Mobile Apps"
-            ].map((text, idx) => (
-                <span key={idx} className="text-slate-500 text-sm sm:text-base cursor-pointer">
-                    {text}
-                </span>
-            ))
-            }
+                {["About", "Research", "Careers", "Privacy Notice", "Help",
+                    "Advertise", "Fair Housing Guide", "Advocacy", "Terms of Use",
+                    "Privacy Portal", "Cookie Preference", "Learn", "AI", "Mobile Apps"
+                ].map((text, idx) => (
+                    <span key={idx} className="text-slate-500 text-sm sm:text-base cursor-pointer">
+                        {text}
+                    </span>
+                ))
+                }
             </div>
             <hr className='w-[200px] sm:w-[500px] my-5' />
             <div className='flex flex-col items-center text-center px-4'>
@@ -43,26 +46,36 @@ const Footer = () => {
                             alt=""
                         />
                     </Link>
-                    <div className='flex flex-col sm:flex-row gap-3'>
-                        <button className='border border-black p-2 rounded-md w-36'>
+                    <motion.div
+                        initial={{ opacity: 0, x: -200 }}
+                        transition={{ duration: 1 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className='flex flex-col sm:flex-row gap-3'>
+                        <button className='border border-black p-1 rounded-md w-36'>
                             <Link className='flex gap-2 justify-center items-center' href="">
                                 <img className='w-6 h-6' src='assets/images/apple.png' />
                                 <p className='text-xs text-center'>Download on the <br /> <span className='font-bold text-sm'>App Store</span></p>
                             </Link>
                         </button>
-                        <button className='border border-black p-2 rounded-md w-36'>
+                        <button className='border border-black p-1 rounded-md w-36'>
                             <Link className='flex gap-2 justify-center items-center' href="">
                                 <img className='w-6 h-6' src='assets/images/playstore.png' />
                                 <p className='text-xs text-center'>Download on the <br /> <span className='font-bold text-sm'>Google Play</span></p>
                             </Link>
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className='flex gap-5 py-5 justify-center sm:justify-start'>
+                <motion.div
+                    initial={{ opacity: 0, x: 200 }}
+                    transition={{ duration: 1 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className='flex gap-5 py-5 justify-center sm:justify-start'>
                     <Instagram className='text-green-700 w-6 h-6 cursor-pointer' />
                     <Facebook className='text-green-700 w-6 h-6 cursor-pointer' />
                     <X className='text-green-700 w-6 h-6 cursor-pointer' />
-                </div>
+                </motion.div>
                 <p className='text-slate-600 text-xs'>&copy; {copyrightYear} Nyumbani Inc.</p>
 
 
