@@ -29,13 +29,6 @@ const Footer = () => {
             ))
             }
             </div>
-            <div className='flex gap-5 justify-center'>
-                <span className='text-slate-500 text-[13px] cursor-pointer'>Privacy Portal</span>
-                <span className='text-slate-500 text-[13px] cursor-pointer'>Cooke Preference</span>
-                <span className='text-slate-500 text-[13px] cursor-pointer'>Learn</span>
-                <span className='text-slate-500 text-[13px] cursor-pointer'>AI</span>
-                <span className='text-slate-500 text-[13px] cursor-pointer'>Mobile Apps</span>
-            </div>
             <hr className='w-[200px] sm:w-[500px] my-5' />
             <div className='flex flex-col items-center text-center px-4'>
                 <p className='text-slate-500 text-xs sm:text-sm'>Nyumbani Group is committed to ensuring digital accessibility for individuals with disabilities.
