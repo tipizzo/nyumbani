@@ -1,8 +1,9 @@
 'use client'
 
-import { Heart, Star } from "lucide-react"
+import { ArrowRight, Heart, Link2, Star } from "lucide-react"
 import Image from "next/image"
 import properties from "@/utils/data";
+import Link from "next/link";
 
 const PropertyCard = () => {
     return (
@@ -18,10 +19,10 @@ const PropertyCard = () => {
                             className="rounded-xl"
                         />
                         <span className={`absolute w-max text-[10px] 
-                            ${property.availability === "available" ? "bg-green-600" 
-                            : property.availability === "unavailable" ? "bg-red-600"
-                            : property.availability === "pending" ? "bg-orange-600" 
-                            : "bg-gray-600"}
+                            ${property.availability === "available" ? "bg-green-600"
+                                : property.availability === "unavailable" ? "bg-red-600"
+                                    : property.availability === "pending" ? "bg-orange-600"
+                                        : "bg-gray-600"}
                              text-white m-3 p-1 rounded-xl`}>{property.availability}</span>
                         <div className="flex flex-col gap-2 mt-5 px-2">
                             <div className="flex items-center justify-between">
@@ -34,7 +35,12 @@ const PropertyCard = () => {
                             <p className="text-[15px] font-bold">{property.daily_price} $ par jour</p>
                         </div>
                     </div>
+
                 ))}
+
+                <button className="flex border-2 border-green-600 items-center justify-center p-2 rounded-xl">
+                    <Link href="" className="flex gap-2">Explore More <ArrowRight /></Link>
+                </button>
             </div>
         </>
 
