@@ -99,7 +99,7 @@ const Navbar = () => {
                     <>
                         {providers && Object.values(providers).map((provider) => (
                             <button
-                                className="hidden md:flex gap-1 items-center text-sm font-semibold border-1 border-green-600 p-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-slate-50 transition-all duration-300"
+                                className="hidden md:flex gap-1 items-center text-sm font-bold border-1 border-green-600 p-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-slate-50 transition-all duration-300"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
                             >
