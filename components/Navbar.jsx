@@ -37,10 +37,10 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 flex items-center justify-between w-full px-10 py-2 border-b z-50 transition-all duration-500 ${
-        scrolling
-          ? "bg-white shadow-md border-gray-100"
-          : "bg-transparent border-transparent shadow-none"
-      }`}>
+            scrolling
+              ? "bg-white/80 shadow-md border-gray-100 backdrop-blur-md"
+              : "bg-transparent border-transparent shadow-none"
+          }`}>
             {/* Logo */}
             <Link href="" className=" font-extrabold">
                 <Image src="/assets/images/traced-logo_nyumbani.png"
@@ -155,7 +155,7 @@ const Navbar = () => {
                         <>
                             {providers && Object.values(providers).map((provider) => (
                                 <button key={provider.name} onClick={() => signIn(provider.id)}
-                                    className="flex gap-1 items-center text-sm font-semibold border-2 border-green-600 p-1 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-300">
+                                    className="flex gap-1 items-center text-sm font-bold border-1 border-green-600 rounded-lg bg-gradient-to-r from-green-500 to-green-600 p-2 hover:bg-green-600 text-slate-50 transition-all duration-300">
                                     <User /> Sign In
                                 </button>
                             ))}
