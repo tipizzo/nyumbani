@@ -19,27 +19,27 @@ const Login = () => {
                 <form className="flex flex-col gap-3">
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">Full Name</label>
-                        <input type="text" placeholder="John Doe" className="p-2 text-sm w-[450px]" />
+                        <input type="text" placeholder="John Doe" className="p-2 text-sm w-[450px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" />
                     </div>
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">Phone Number</label>
-                        <input type="text" placeholder="+243 974377888" className="p-2 text-sm w-[450px]" />
+                        <input type="text" placeholder="+243 974377888" className="p-2 text-sm w-[450px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" />
                     </div>
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">Email</label>
-                        <input type="email" placeholder="example@gmail.com" className="p-2 text-sm w-[450px]" />
+                        <input type="email" placeholder="example@gmail.com" className="p-2 text-sm w-[450px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" />
                     </div>
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">Password</label>
-                        <input type="password" className="p-2 text-sm w-[450px]" />
+                        <input type="password" className="p-2 text-sm w-[450px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" />
                     </div>
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">Confirm your Password</label>
-                        <input type="password" className="p-2 text-sm w-[450px]" />
+                        <input type="password" className="p-2 text-sm w-[450px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" />
                     </div>
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">Location</label>
-                        <input type="text" placeholder="Himbi, Goma/DRC" className="p-2 text-sm w-[450px]" />
+                        <input type="text" placeholder="Himbi, Goma/DRC" className="p-2 text-sm w-[450px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" />
                     </div>
                     <div className="flex flex-col gap-3">
                         <label className="text-sm font-semibold">User Role</label>
@@ -49,7 +49,7 @@ const Login = () => {
                             <option value="tenant">Agent</option>
                         </select>
                     </div>
-                    <button className="font-bold border-1 border-green-600 p-1 mt-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-slate-50 text-sm cursor-pointer">
+                    <button className="font-bold border-1 border-green-600 p-2 mt-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-slate-50 text-sm cursor-pointer">
                         Sign Up
                     </button>
                     <div className="flex justify-between gap-2">
