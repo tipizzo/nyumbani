@@ -45,33 +45,33 @@ const Login = () => {
                         {state === "Sign Up"
                             && <div className="flex flex-col gap-1">
                                 <label className="text-sm font-semibold">Full Name</label>
-                                <input type="text" placeholder="John Doe" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setFullName(e.target.fullName)} value={fullName} required />
+                                <input type="text" placeholder="John Doe" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setFullName(e.target.value)} value={fullName} required />
                             </div>
                         }
                         {state === "Sign Up"
                             && <div className="flex flex-col gap-1">
                                 <label className="text-sm font-semibold">Phone Number</label>
-                                <input type="text" placeholder="+243 974377888" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setPhone(e.target.phone)} value={phone} required />
+                                <input type="text" placeholder="+243 974377888" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setPhone(e.target.value)} value={phone} required />
                             </div>
                         }
                         <div className="flex flex-col gap-1">
                             <label className="text-sm font-semibold">Email</label>
-                            <input type="email" placeholder="example@gmail.com" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setEmail(e.target.email)} value={email} required />
+                            <input type="email" placeholder="example@gmail.com" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setEmail(e.target.value)} value={email} required />
                         </div>
                         <div className="flex flex-col gap-1">
                             <label className="text-sm font-semibold">Password</label>
-                            <input type="password" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setPassword(e.target.password)} value={password} required />
+                            <input type="password" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setPassword(e.target.value)} value={password} required />
                         </div>
                         {state === "Sign Up"
                             && <div className="flex flex-col gap-1">
                                 <label className="text-sm font-semibold">Confirm your Password</label>
-                                <input type="password" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setConfirmPassword(e.target.confirmPassword)} value={confirmPassword} required />
+                                <input type="password" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setConfirmPassword(e.target.value)} value={confirmPassword} required />
                             </div>
                         }
                         {state === "Sign Up"
                             && <div className="flex flex-col gap-1">
                                 <label className="text-sm font-semibold">Location</label>
-                                <input type="text" placeholder="Himbi, Goma/DRC" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setLocation(e.target.location)} value={location} required />
+                                <input type="text" placeholder="Himbi, Goma/DRC" className="p-2 text-sm w-[450px] border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300" onChange={(e) => setLocation(e.target.value)} value={location} required />
                             </div>
                         }
                         {state === "Sign Up"
