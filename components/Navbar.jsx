@@ -36,11 +36,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 left-0 flex items-center justify-between w-full px-10 py-2 border-b z-50 transition-all duration-500 ${
-            scrolling
-              ? "bg-white/80 shadow-md border-gray-100 backdrop-blur-md"
-              : "bg-transparent border-transparent shadow-none"
-          }`}>
+        <nav className={`fixed top-0 left-0 flex items-center justify-between w-full px-10 py-2 border-b z-50 transition-all duration-500 bg-white/80 shadow-md border-gray-100 backdrop-blur-md `}>
             {/* Logo */}
             <Link href="/" className=" font-extrabold">
                 <Image src="/assets/images/traced-logo_nyumbani.png"
@@ -53,18 +49,18 @@ const Navbar = () => {
 
             {session?.user ? (
                 <div className="hidden md:flex gap-8">
-                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                    <Link href="" className={`text-sm text-black font-semibold hover:text-green-500 transition-all duration-300`}>
                         BUY
                     </Link>
-                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                    <Link href="" className={`text-sm text-black font-semibold hover:text-green-500 transition-all duration-300`}>
                         RENT
                     </Link>
-                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                    <Link href="" className={`text-sm text-black font-semibold hover:text-green-500 transition-all duration-300`}>
                         LOANS                    </Link>
-                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                    <Link href="" className={`text-sm text-black font-semibold hover:text-green-500 transition-all duration-300`}>
                         FIND AGENT
                     </Link>
-                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                    <Link href="" className={`text-sm text-black font-semibold hover:text-green-500 transition-all duration-300`}>
                         LOCATIONS
                     </Link>
                 </div>
@@ -79,7 +75,7 @@ const Navbar = () => {
                              Create Post
                         </Link>
 
-                        <button type="button" onClick={signOut} className={`flex items-center text-sm ${scrolling ? "text-black" : "text-white"} font-semibold  hover:text-green-500 transition-all duration-300`}>
+                        <button type="button" onClick={signOut} className={`flex items-center text-sm text-black font-semibold  hover:text-green-500 transition-all duration-300`}>
                             Sign Out
                         </button>
 
@@ -112,7 +108,7 @@ const Navbar = () => {
 
             {/* Burger Menu Mobile */}
             <button onClick={() => setOpenMenu(!openMenu)} className="md:hidden">
-                {openMenu ? <X size={28} className={`${scrolling ? "text-black" : "text-white"}`} /> : <Menu size={28} className={`${scrolling ? "text-black" : "text-white"}`} />}
+                {openMenu ? <X size={28} className="text-black" /> : <Menu size={28} className="text-black" />}
             </button>
 
             {/* Mobile Navigation */}

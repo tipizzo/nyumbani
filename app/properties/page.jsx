@@ -24,7 +24,7 @@ const Properties = () => {
         <div>
             <Provider>
                 <Navbar />
-                <div className='mt-16 mb-10'>
+                <div className='mt-16 mb-10 pt-8'>
                     <div
                         className="w-full flex flex-col items-center px-3">
                         {/* Grid Layout */}

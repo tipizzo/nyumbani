@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <section>
+        <section className="mt-16">
             {/* Background Image with Overlay */}
             <div
                 className="min-h-[500px] sm:min-h-[600px] bg-cover bg-no-repeat bg-center w-full overflow-hidden relative rounded-b-md"
