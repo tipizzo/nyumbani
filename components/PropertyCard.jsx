@@ -16,7 +16,7 @@ const PropertyCard = () => {
             className="w-full flex flex-col items-center px-3">
             {/* Grid Layout */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-fit sm:max-w-7xl mx-auto py-10 px-4">
-                {properties.map(property => (
+                {properties.slice(0, 4).map(property => (
                     <div key={property.id} className="flex flex-col gap-1 max-w-[350px] sm:max-w-[500px] w-full cursor-pointer rounded-xl shadow-xl hover:bg-gray-100 transition-all duration-300 mb-8 pb-5 relative">
                         <div className="relative w-full h-[200px]">
                             <Image
@@ -51,7 +51,7 @@ const PropertyCard = () => {
 
             {/* Centered Button */}
             <div className="w-full flex justify-center">
-                <Link href="" className="border border-green-600 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 hover:text-white flex items-center justify-center p-2 rounded-xl gap-2 text-sm transition-all duration-300">
+                <Link href="/properties" className="border border-green-600 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 hover:text-white flex items-center justify-center p-2 rounded-xl gap-2 text-sm transition-all duration-300">
                     Explore More <ArrowRight className=" hover:text-white transition-all" />
                 </Link>
             </div>

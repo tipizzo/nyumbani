@@ -104,8 +104,8 @@ const Login = () => {
                         </div>
                         {
                             state === "Sign Up"
-                            ? <p className="text-center text-sm mt-2">Already have an account ?<Link href="" className="text-blue-700 font-bold cursor-pointer" onClick={() => setState("Login")}>Login</Link></p>
-                            : <p className="text-center text-sm mt-2">Create a new account ?<Link href="" className="text-blue-700 font-bold cursor-pointer" onClick={() => setState("Sign Up")}>Sign Up</Link></p>
+                            ? <p className="text-center text-sm mt-2">Already have an account ? <Link href="" className="text-blue-700 font-bold cursor-pointer" onClick={() => setState("Login")}>Login</Link></p>
+                            : <p className="text-center text-sm mt-2">Create a new account ? <Link href="" className="text-blue-700 font-bold cursor-pointer" onClick={() => setState("Sign Up")}>Sign Up</Link></p>
                         }
                     </form>
                 </div>

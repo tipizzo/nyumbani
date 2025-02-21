@@ -42,7 +42,7 @@ const Navbar = () => {
               : "bg-transparent border-transparent shadow-none"
           }`}>
             {/* Logo */}
-            <Link href="" className=" font-extrabold">
+            <Link href="/" className=" font-extrabold">
                 <Image src="/assets/images/traced-logo_nyumbani.png"
                     width={110}
                     height={80}
@@ -52,21 +52,20 @@ const Navbar = () => {
             {/* Desktop LInk */}
 
             {session?.user ? (
-                <div className="hidden md:flex gap-6">
-                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                        Buy
+                <div className="hidden md:flex gap-8">
+                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                        BUY
                     </Link>
-                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                        Rent
+                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                        RENT
                     </Link>
-                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                        Loans
+                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                        LOANS                    </Link>
+                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                        FIND AGENT
                     </Link>
-                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                        Find Agent
-                    </Link>
-                    <Link href="" className="text-sm font-semibold hover:text-green-700 transition-all duration-300">
-                        Locations
+                    <Link href="" className={`text-sm ${scrolling ? "text-black" : "text-white"} font-semibold hover:text-green-500 transition-all duration-300`}>
+                        LOCATIONS
                     </Link>
                 </div>
             ) : (
@@ -76,12 +75,12 @@ const Navbar = () => {
             <div>
                 {session?.user ? (
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/add_item" className="flex text-sm">
-                            <Plus /> Create Post
+                        <Link href="/add_item" className={`flex items-center border p-2 rounded-lg border-none bg-gradient-to-r from-green-600 to-yellow-200 text-sm font-bold text-black`}>
+                             Create Post
                         </Link>
 
-                        <button type="button" onClick={signOut} className="flex items-center text-sm font-semibold  hover:text-green-700 transition-all duration-300">
-                            <LogOut /> Sign Out
+                        <button type="button" onClick={signOut} className={`flex items-center text-sm ${scrolling ? "text-black" : "text-white"} font-semibold  hover:text-green-500 transition-all duration-300`}>
+                            Sign Out
                         </button>
 
                         <Link href="/profile">
@@ -99,7 +98,7 @@ const Navbar = () => {
                     <>
                         {providers && Object.values(providers).map((provider) => (
                             <button
-                                className="hidden md:flex gap-1 items-center text-sm font-bold border-1 border-green-600 p-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-slate-50 transition-all duration-300"
+                                className="hidden md:flex gap-1 items-center  border-1 bg-gradient-to-r from-green-600 to-yellow-300 text-sm font-bold text-black p-2 rounded-lg transition-all duration-300"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
                             >
@@ -113,7 +112,7 @@ const Navbar = () => {
 
             {/* Burger Menu Mobile */}
             <button onClick={() => setOpenMenu(!openMenu)} className="md:hidden">
-                {openMenu ? <X size={28} /> : <Menu size={28} />}
+                {openMenu ? <X size={28} className={`${scrolling ? "text-black" : "text-white"}`} /> : <Menu size={28} className={`${scrolling ? "text-black" : "text-white"}`} />}
             </button>
 
             {/* Mobile Navigation */}
@@ -122,11 +121,11 @@ const Navbar = () => {
                 <div className="absolute top-16 right-0 bg-white shadow-lg p-4 flex flex-col gap-4 z-50 rounded-sm md:hidden">
                     {session?.user ? (
                         <>
-                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Buy</Link>
-                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Rent</Link>
-                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Loans</Link>
-                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Find Agent</Link>
-                            <Link href="#" className="text-sm font-semibold hover:text-green-700">Locations</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">BUY</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">RENT</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">LOANS</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">FIND AGENT</Link>
+                            <Link href="#" className="text-sm font-semibold hover:text-green-700">LOCATIONS</Link>
                             <hr />
                         </>
                     ) : (
@@ -135,11 +134,11 @@ const Navbar = () => {
 
                     {session?.user ? (
                         <>
-                            <Link href="/add_item" className="flex text-sm">
-                                <Plus /> Create Post
+                            <Link href="/add_item" className="border p-2 rounded-lg border-none bg-green-600 text-sm text-white">
+                                Create Post
                             </Link>
                             <button type="button" onClick={signOut} className="flex text-sm font-semibold hover:text-green-700">
-                                <LogOut /> Sign Out
+                                Sign Out
                             </button>
                             <Link href="/">
                                 <Image
