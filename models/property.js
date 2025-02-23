@@ -1,10 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
 const propertySchema = new Schema({
-    title: {
-        type: String,
-        required: [true, 'Title is required']
-    },
 
     description: {
         type: String,
