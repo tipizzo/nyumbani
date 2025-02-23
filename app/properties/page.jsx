@@ -10,14 +10,26 @@ import { motion } from 'framer-motion'
 import properties from '@/utils/data'
 import { Heart } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Properties = () => {
 
     const [visibleCard, setVisibleCard] = useState(4)
+    const [propertiesData, setPropertiesData] = useState([])
 
     const loadMore = () => {
         setVisibleCard(prevCount => prevCount + 4)
+    }
+
+    useEffect(() => {
+        fetchProperties();
+    }, [])
+
+    const fetchProperties = async () => {
+        const res = await fetch('/api/properties')
+        const data = await res.json();
+        setPropertiesData(data.data)
+
     }
 
     return (
@@ -29,7 +41,7 @@ const Properties = () => {
                         className="w-full flex flex-col items-center px-3">
                         {/* Grid Layout */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-fit sm:max-w-7xl mx-auto py-10 px-4">
-                            {properties.slice(0, visibleCard).map(property => (
+                            {propertiesData.slice(0, visibleCard).map(property => (
                                 <div key={property.id} className="flex flex-col gap-1 max-w-[350px] sm:max-w-[500px] w-full cursor-pointer rounded-xl shadow-xl hover:bg-gray-100 transition-all duration-300 mb-8 pb-5 relative">
                                     <div className="relative w-full h-[200px]">
                                         <Image
