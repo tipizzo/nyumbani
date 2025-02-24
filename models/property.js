@@ -30,11 +30,7 @@ const propertySchema = new Schema({
         type: Number,
         required: [true, 'Number of bathrooms is required']
     },
-
-    area: {
-        type: Number
-    },
-
+    
     type: {
         type: String,
         enum: ["house", "apartment", "land"],
