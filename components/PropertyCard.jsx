@@ -5,8 +5,20 @@ import Image from "next/image"
 import properties from "@/utils/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaHeart } from "react-icons/fa"
+import { useState } from "react";
 
 const PropertyCard = () => {
+
+    const [likedProperties, setLikedProperties] = useState({})
+
+    const handleLikeButton = (propertyId) => {
+        setLikedProperties((prev) => ({
+            ...prev,
+            [propertyId]: !prev[propertyId]
+        }));
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 200 }}
@@ -38,7 +50,9 @@ const PropertyCard = () => {
                         <div className="flex flex-col gap-2 mt-5 px-2">
                             <div className="flex items-center justify-between">
                                 <p className="text-[15px] font-bold">{property.neighborhood}, {property.city} - {property.country}</p>
-                                <p className="flex gap-1 text-[15px] items-center"><Heart /></p>
+                                <p className="flex gap-1 text-[15px] items-center">
+                                    <button className="focus:outline-none" onClick={() => handleLikeButton(property.id)}><FaHeart className={`w-5 h-5 transition-colors duration-200 ${likedProperties[property.id] ? 'text-red-500' : 'text-gray-400' } `} /></button>
+                                </p>
                             </div>
                             <p className="text-sm font-light">{property.description}</p>
                             <p className="text-sm font-semibold">Bedroom: {property.bedroom}</p>
